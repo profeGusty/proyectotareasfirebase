@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fireBase lista Tareas</title> 
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+
+        <form id="task-form">
+            
+            <label for="title">Titulo: </label>
+            <input type="text" placeholder="Titulo de tarea" id="task-title">
+            
+            <label for="descripcion">Descripcion</label>
+            <textarea id="descripcion" rows="3" placeholder="descripcion tarea"></textarea>
+            
+            <button id="btn-task-save">Guardar</button>
+            
+        </form>
+        
+        <div class="tasks-container" id="tasks-container"></div>
+        
+    </div>
+        <script type="module" src="index.js"></script>
+        <!-- git remote add origin https://github.com/profeGusty/proyectotareasfirebase.git -->
+</body>
+</html>

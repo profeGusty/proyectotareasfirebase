@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,button,input{
+    font-family: 'Poppins', sans-serif;
+}
+
+label{
+    font-weight: 200;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "formulario listatareas listatareas"
+      "formulario listatareas listatareas"
+      "formulario listatareas listatareas";
+  }
+  
+  .formulario { grid-area: formulario; }
+  
+  .listatareas { grid-area: listatareas; }
+  
