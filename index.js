@@ -39,9 +39,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     
     btnsDelete.forEach(btn => {
       btn.addEventListener('click',(event) =>{
-       // console.log("eleminando")
-       // console.log(event.target.dataset.id);
-        deleteTask(event.target.dataset.id)
+        if (confirm("¿Estas seguro de eliminar esta tarea?")){
+            deleteTask(event.target.dataset.id)
+        }else{
+          return
+        }
       })
     })
 
