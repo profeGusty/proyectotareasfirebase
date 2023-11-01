@@ -7,24 +7,150 @@
 body,button,input{
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+    background-color: #ccc;
+    position: relative;
+}
 label{
     font-weight: 200;
 }
-
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "formulario listatareas listatareas"
-      "formulario listatareas listatareas"
-      "formulario listatareas listatareas";
+      "formulario listatareas"
+      "formulario listatareas"
+      "formulario listatareas";
+
+    }
+    .formulario { 
+        grid-area: formulario;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        position: relative;
+    }
+    
+    form{
+        position:fixed;
+        top: 3rem;
+        right:55%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: rgb(233, 232, 232);
+        border-radius: .5rem;
+    
+    }
+    .titulo-form{
+        text-transform: uppercase;
+    }
+    .task-title,.descripcion{
+        padding: 5px;
+    }
+    .btn-guardar{
+        padding: 5px;
+        background-color: rgba(0, 42, 255, 0.801);
+        border: none;
+        border-radius: .5rem;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 3px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all .3s;
+    }
+  .btn-guardar:hover{
+    color: rgba(0, 42, 255, 0.801) ;
+    background-color: #fff;
+    border: 2px solid  rgba(0, 42, 255, 0.801);
   }
-  
-  .formulario { grid-area: formulario; }
-  
-  .listatareas { grid-area: listatareas; }
-  
+  .listatareas {
+     grid-area: listatareas;
+     display: flex;
+     justify-content: left;
+     align-items: center;
+     width: 100%;
+     padding: 1rem;
+     /* height: 100vh; */
+     }
+
+  .tasks-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 1rem;
+        /* width: auto; */
+        /* flex-wrap: wrap; */
+     }
+
+     .card-tarea{
+        background-color: rgb(233, 232, 232);
+        width: 400px;
+        padding: 10px;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+     }
+
+     .btn-delete,.btn-edit{
+        padding: 5px 15px;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 3px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .btn-delete{
+        border-radius: .5rem 0 0 .5rem;
+        background-color: rgb(242, 64, 64);
+    }
+
+    .btn-edit{
+        border-radius: 0 .5rem .5rem 0;
+        background-color: rgb(78, 116, 1);
+    }
+
+@media (max-width: 390px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px auto;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "formulario"
+          "listatareas"
+          "listatareas";
+        }
+        .formulario { 
+             padding: 1rem;
+        }
+        form{
+            position:relative;
+            width: 100%;
+            inset: 0;
+        }
+        .listatareas {
+             padding: 1rem;
+        }
+
+        .tasks-container{
+        width: 100%;
+     }
+
+     .card-tarea{
+        width: 100%;
+     }
+
+
+
+}

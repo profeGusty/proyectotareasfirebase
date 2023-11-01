@@ -8,20 +8,83 @@
 </head>
 <body>
     <div class="container">
-
-        <form id="task-form">
-            
-            <label for="title">Titulo: </label>
-            <input type="text" placeholder="Titulo de tarea" id="task-title">
-            
-            <label for="descripcion">Descripcion</label>
-            <textarea id="descripcion" rows="3" placeholder="descripcion tarea"></textarea>
-            
-            <button id="btn-task-save">Guardar</button>
-            
-        </form>
+       <div class="formulario">
+           <form id="task-form">
+               <h2 class="titulo-form">Agregar Tarea</h2>
+               <label for="title">Titulo: </label>
+               <input type="text" placeholder="Titulo de tarea" id="task-title" class="task-title">
+               
+               <label for="descripcion">Descripcion:</label>
+               <textarea id="descripcion" class="descripcion" rows="5" placeholder="descripcion tarea"></textarea>
+               
+               <button id="btn-task-save" class="btn-guardar">Guardar</button>
+               
+            </form>
+        </div>
         
-        <div class="tasks-container" id="tasks-container"></div>
+        <div class="listatareas">
+            <div class="tasks-container" id="tasks-container">
+                <!-- <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Borrar</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>    
+                 <div class="card-tarea">
+                    <h3>Tarea 1</h3>
+                    <p>primer tarea</p>
+                    <div class="card-botones">
+                        <button class='btn-delete' data-id="${doc.id}">Delete</buttton>
+                        <button class='btn-edit' data-id="${doc.id}">Editar</buttton>
+                    </div>
+                 </div>     -->
+                
+
+
+            </div>
+        </div>
         
     </div>
         <script type="module" src="index.js"></script>
