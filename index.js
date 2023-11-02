@@ -9,6 +9,11 @@ import {
 
 const taskContainer = document.getElementById("tasks-container");
 const taskForm = document.getElementById("task-form");
+const open = document.getElementById('icono-open');
+const close = document.getElementById('icono-close');
+const contenidoForm = document.getElementById('contenido-form')
+
+console.log(contenidoForm)
 
 let estado = false;
 let id = "";
@@ -65,6 +70,8 @@ window.addEventListener("DOMContentLoaded", async () => {
        })
      })
   });
+
+
 });
 
 taskForm.addEventListener("submit", (e) => {
@@ -86,3 +93,12 @@ taskForm.addEventListener("submit", (e) => {
 
   taskForm.reset();
 });
+
+open.addEventListener('click',() => {
+ contenidoForm.style.display='flex'
+});
+
+close.addEventListener('click',() => {
+  contenidoForm.style.display='none'
+ });
+ 
